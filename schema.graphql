@@ -1,0 +1,18 @@
+type Person{
+    name: String
+}
+
+type Query{
+    helloWorld: String
+    persons: [Person]
+    person(index: Int): Person
+}
+
+input InputPerson{
+    name: String
+}
+
+type Mutation{
+    insert(name: String): String
+    insertInput(person: InputPerson): String
+}
